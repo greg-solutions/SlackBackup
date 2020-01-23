@@ -1,0 +1,28 @@
+apply plugin: 'java'
+group 'SlackBackup'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes 'Class-Path': '.'
+        attributes 'Main-Class': 'backup.BackupMaker'
+    }
+}
+sourceSets {
+    main {
+        java {
+            srcDirs 'src'
+        }
+    }
+
+
+}
+sourceCompatibility = 1.8 // java 8
+targetCompatibility = 1.8
